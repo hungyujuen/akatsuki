@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火影忍者曉組織角色介紹</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .header-image {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .header-image img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #000;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .modal-content img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .member-card {
+            position: relative;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+        .member-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .member-card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        .member-card:hover .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-image">
+        <!-- 這裡放你上傳的群像照片，假設你保存為 akatsuki_group.jpg -->
+        <img src="akatsuki_group.jpg" alt="曉組織群像">
+    </div>
+
+    <h1 style="text-align: center;">曉組織成員介紹</h1>
+
+    <div class="members-grid">
+        <!-- Pain (Nagato) -->
+        <div class="member-card">
+            <img src="https://static.wikia.nocookie.net/naruto/images/2/21/Pain_Main.png/revision/latest?cb=20160125192129" alt="Pain">
+            <h3>Pain (長門)</h3>
+            <div class="tooltip">
+                <h4>背景</h4>
+                <p>長門來自雨忍村（Amegakure），因第二次忍者大戰成為孤兒。他與彌彥、小南在自來也的指導下成長。彌彥死後，長門以「佩恩」身份領導曉組織，試圖通過痛苦帶來和平。</p>
+                <h4>能力</h4>
+                <p>佩恩擁有輪迴眼，可同時操控六具屍體（六道佩恩），每個屍體擁有不同能力，如召喚、吸收查克拉和操控重力。</p>
+            </div>
+        </div>
+
+        <!-- Konan -->
+        <div class="member-card">
+            <img src="https://static.wikia.nocookie.net/naruto/images/9/98/Konan.png/revision/latest?cb=20160125191924" alt="Konan">
+            <h3>小南</h3>
+            <div class="tooltip">
+                <h4>背景</h4>
+                <p>小南同樣來自雨忍村，與長門、彌彥共同成長。戰爭的苦難和彌彥的死對她影響深遠，她忠於長門，協助其通過曉組織實現和平計劃。</p>
+                <h4>能力</h4>
+                <p>小南擅長操縱紙張，可將身體化為無數紙片，用於攻擊、防禦和飛行。她的終極技「神之紙人」能引發巨大爆炸。</p>
+            </div>
+        </div>
+
+        <!-- Itachi Uchiha -->
+        <div class="member-card">
+            <img src="https://static.wikia.nocookie.net/naruto/images/2/21/ItachiUchiha.png/revision/latest?cb=20160125192202" alt="Itachi Uchiha">
+            <h3>宇智波鼬</h3>
+            <div class="tooltip">
+                <h4>背景</h4>
+                <p>鼬是木葉村宇智波一族的天才，幼年經歷第三次忍者大戰。為阻止家族政變，他屠戮全族，只留弟弟佐助，隨後以雙重間諜身份加入曉組織。</p>
+                <h4>能力</h4>
+                <p>鼬擁有寫輪眼和萬花筒寫輪眼，擅長幻術如「月讀」，其他能力包括「天照」（黑炎）和「須佐能乎」（虛幻戰士）。</p>
+            </div>
+        </div>
+
+        <!-- Kisame Hoshigaki -->
+        <div class="member-card">
+            <img src="https://static.wikia.nocookie.net/naruto/images/1/13/Kisame_Hoshigaki.png/revision/latest?cb=20160115192749" alt="Kisame Hoshigaki">
+            <h3>干柿鬼鮫</h3>
+            <div class="tooltip">
+                <h4>背景</h4>
+                <p>鬼鮫被稱為「霧隱之怪人」，曾是霧忍村七人刀眾之一。因村內腐敗，他叛逃並加入曉組織。</p>
+                <h4>能力</h4>
+                <p>鬼鮫持有「鮫肌」這把活著的劍，能吸收查克拉。他擁有巨大查克拉量，可與鮫肌融合變成鯊魚形態，還能操縱水遁。</p>
+            </div>
+        </div>
+
+        <!-- Deidara -->
+        <div class="member-card">
+            <img src="https://static.wikia.nocookie.net/naruto/images/1/1a/Deidara.png/revision/latest?cb=20170717100506" alt="Deidara">
+            <h3>迪達拉</h3>
+            <div class="tooltip">
+                <h4>背景</h4>
+                <p>迪達拉來自岩忍村，是一位熱愛爆炸藝術的忍者，因村內保守觀念與他衝突，他離開並加入曉組織。</p>
+                <h4>能力</h4>
+                <p>迪達拉擅長爆遁，可製作爆炸黏土，觸發爆炸。他的終極技「C0」是自爆式大範圍攻擊。</p>
+            </div>
+        </div>
+
+        <!-- Sasori -->
+        <div class="member-card">
+            <img src="https://static.wikia.nocookie.net/naruto/images/4/4c/Sasori.png/revision/latest?cb=20160115192145" alt="Sasori">
+            <h3>佐助蝎</h3>
+            <div class="tooltip">
+                <h4>背景</h4>
+                <p>蝎來自砂忍村，幼年失去父母，發展出對人偶的執念，後將自己改造成人偶。</p>
+                <h4>能力</h4>
+                <p>蝎精通傀儡術，可操控大量人偶，並將自身改造成人偶，內藏多種武器。</p>
+            </div>
+        </div>
+
+        <!-- Hidan -->
+        <div class="member-card">
+            <img src="https://static.wikia.nocookie.net/naruto/images/5/5f/Hidan.png/revision/latest?cb=20160115192341" alt="Hidan">
+            <h3>飛段</h3>
+            <div class="tooltip">
+                <h4>背景</h4>
+                <p>飛段來自湯忍村，通過邪神教儀式獲得不死之身，崇拜以痛苦為樂的邪神。</p>
+                <h4>能力</h4>
+                <p>飛段擁有不死之身，通過詛咒儀式將自己與對手連繫，造成鏡像傷害。</p>
+            </div>
+        </div>
+
+        <!-- Kakuzu -->
+        <div class="member-card">
+            <img src="https://static.wikia.nocookie.net/naruto/images/2/25/Kakuzu.png/revision/latest?cb=20160115192505" alt="Kakuzu">
+            <h3>角都</h3>
+            <div class="tooltip">
+                <h4>背景</h4>
+                <p>角都來自瀑布忍村，因任務失敗受罰後對村子失望，轉而走上犯罪道路。</p>
+                <h4>能力</h4>
+                <p>角都的「地怨虞」術可植入多個心臟，每個心臟帶來不同屬性遁術。</p>
+            </div>
+        </div>
+
+        <!-- Zetsu -->
+        <div class="member-card">
+            <img src="https://static.wikia.nocookie.net/naruto/images/9/96/Zetsu.png/revision/latest?cb=20160116002051" alt="Zetsu">
+            <h3>絕</h3>
+            <div class="tooltip">
+                <h4>背景</h4>
+                <p>絕由黑絕和白絕組成，是大筒木輝夜意志的化身，擁有獨特起源。</p>
+                <h4>能力</h4>
+                <p>絕能與地面和植物融合，擅長間諜工作；黑絕可操縱他人身體。</p>
+            </div>
+        </div>
+
+        <!-- Obito Uchiha (Tobi) -->
+        <div class="member-card">
+            <img src="https://static.wikia.nocookie.net/naruto/images/4/40/Obito_Uchiha.png/revision/latest?cb=20160116200513" alt="Obito Uchiha">
+            <h3>宇智波帶土 (土師)</h3>
+            <div class="tooltip">
+                <h4>背景</h4>
+                <p>帶土原本是木葉忍者，任務中被誤認為死亡，獲斑救治後被操縱，執行斑的計劃。</p>
+                <h4>能力</h4>
+                <p>帶土擁有寫輪眼和輪迴眼，擅長「神威」術，可將身體傳送到另一空間。</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.header-image img').addEventListener('click', function() {
+            document.querySelector('.modal').style.display = 'block';
+        });
+        document.querySelector('.close').addEventListener('click', function() {
+            document.querySelector('.modal').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
